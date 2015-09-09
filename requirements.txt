@@ -1,0 +1,9 @@
+# requirements.txt
+
+
+celery
+pyramid
+waitress
+
+
+# EOF
