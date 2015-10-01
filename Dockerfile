@@ -10,8 +10,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 EXPOSE 6543
 
-ENV CELERY_BROKER_URL=amqp://guest@rabbit
-
 WORKDIR /opt/service
 CMD ["./run.sh"]
 COPY run.sh run.sh
