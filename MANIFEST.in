@@ -1,0 +1,2 @@
+recursive-include frontend/js *.js
+recursive-include frontend/templates *.pt

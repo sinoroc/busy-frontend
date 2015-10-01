@@ -28,6 +28,7 @@ setuptools.setup(
     version=VERSION,
     packages=setuptools.find_packages(),
     install_requires=REQUIRES,
+    include_package_data=True,
     entry_points=ENTRY_POINTS,
 )
 
