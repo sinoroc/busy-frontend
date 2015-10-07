@@ -3,6 +3,7 @@
 
 
 import logging
+import os
 import pyramid
 
 
@@ -19,12 +20,20 @@ def print_request_headers(event):
 
 @pyramid.view.view_config(route_name='web_home', renderer='frontend:templates/web_home.pt')
 def web_home_view(request):
-    return {}
+    backend_url = request.registry.settings['backend_url']
+    return {
+        'backend_url': backend_url,
+    }
 
 
 def main(dummy_global_config, **settings):
     """ Make the Pyramid WSGI application.
     """
+
+    settings['backend_url'] = '{}/{}'.format(
+        os.environ.get('BACKEND_URL', 'http://backend:8080'),
+        'v0.0.0',
+    )
 
     config = pyramid.config.Configurator(
         settings=settings,

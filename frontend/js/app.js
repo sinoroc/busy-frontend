@@ -1,4 +1,3 @@
-var backendUrl = 'http://backend:8080/v0.0.0';
 var taskInterval = 500;
 var fooArgument = 3;
 
