@@ -1,7 +1,6 @@
 # requirements.txt
 
 
-celery[redis]
 pyramid
 pyramid_chameleon
 waitress

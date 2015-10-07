@@ -11,7 +11,6 @@ NAME = 'frontend'
 VERSION = '0.0.0'
 
 REQUIRES = [
-    'celery[redis]',
     'pyramid',
     'pyramid_chameleon',
     'waitress',
